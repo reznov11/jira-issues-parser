@@ -11,7 +11,7 @@ CONFIG = {
       'JIRA_EMAIL', "reznov110@gmail.com"
     ),
     os.environ.get(
-      'JIRA_TOKEN', "puZyihrx6PwwOpTqEQnzA218"
+      'JIRA_TOKEN', "aHU68ZWnWWXjoA07OXcND918"
     )
   ),
   'proxy': { 
