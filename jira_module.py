@@ -50,6 +50,7 @@ class JiraTest():
   def dtime_formater(self, date) -> str:
     return dtime.parse(date)
 
+
   def print_content(self, content) -> None:
     print(content)
 
@@ -58,6 +59,7 @@ class JiraTest():
     with open('jira_test.txt', 'a') as fi:
       fi.write(content)
       fi.close()
+
 
   def create_new_issue(self, data=None) -> FunctionType:
     if not data:
