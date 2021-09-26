@@ -59,11 +59,13 @@ Generate tokens
 
 - `java -jar OAuthTutorialClient-1.0.jar requestToken`
 - If everything is correct, the result will be something like this:
+
 `
 Token:            ec3dj4byySM5ek3XW7gl7f4oc99obAlo
 Token Secret:   OhONj0eF7zhXAMKZLbD2Rd3x7Dmxjy0d
 Retrieved request token. go to https://jira101.atlassian.net/plugins/servlet/oauth/authorize?oauth_token=ec3dj4byySM5ek3XW7gl7f4oc99obAlo to authorize it
 `
+
 - Copy **Token Secret** key and paste it to **secret_token** in `settings.py`
 - Copy **Retrieved request token URL** and open it in your browser
 - You will see a **Welcome to Jira** message, click **Allow** button
