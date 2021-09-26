@@ -86,9 +86,6 @@ Retrieved request token. go to https://jira101.atlassian.net/plugins/servlet/oau
 - `java -jar OAuthTutorialClient-1.0.jar accessToken qTJkPi`, replace code with yours.
 - Copy **Access token** key and paste it to **access_token** in `settings.py`
 
-Change `settings.py`:
----------------------
-
 # Open `settings.py`
 
 - DOMAIN = your project domain without atlassian.net
