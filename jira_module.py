@@ -43,8 +43,8 @@ class JiraTest():
         content += f'Created = {created_dtime.strftime("%d-%m-%Y %H:%M:%S")}\n'
         content += f'========================================\n'
 
-        self.write_to_file(content)
         self.print_content(content)
+        self.write_to_file(content)
 
 
   def dtime_formater(self, date) -> str:
