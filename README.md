@@ -7,11 +7,8 @@ Generate keys
 # Run the following commands
 
 - openssl genrsa -out jira_privatekey.pem 1024
-
 - openssl req -newkey rsa:1024 -x509 -key jira_privatekey.pem -out jira_publickey.cer -days 365
-
 - openssl pkcs8 -topk8 -nocrypt -in jira_privatekey.pem -out jira_privatekey.pcks8
-
 - openssl x509 -pubkey -noout -in jira_publickey.cer  > jira_publickey.pem
 
 Generate config.example
@@ -21,18 +18,13 @@ Generate config.example
 
 - java -jar OAuthTutorialClient-1.0.jar requestToken
 
-
 Create application link
 -----------------------
 
 - Go to https://jira-tt-123.atlassian.net/plugins/servlet/applinks/listApplicationLinks
-
 - Type http://example.com in the field and click "Create new link"
-
 - Wait a few seconds until modal window opens and click "Continue"
-
 - Next modal window opens, fill in the fields as shown below
-
 * Application Name = anything you want
 * Application Type = Generic application
 * Service Provider Name = anything you want
@@ -41,11 +33,8 @@ Create application link
 * Request Token URL = http://example.com
 * Access token URL = http://example.com
 * Authorize URL = http://example.com
-
 - Click "Continue"
-
 - Next modal window opens, fill in the fields as shown below
-
 * Consumer Key = OauthKey
 * Consumer Name = Your name
 * Public Key = copy the public key from the `jira_publickey.pem` file and paste it into this field
@@ -56,13 +45,9 @@ Change config.example settings
 ------------------------------
 
 - Open `jira_privatekey.pcks8` and copy only the text between `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----`
-
 - Open this website https://www.textfixer.com/tools/remove-line-breaks.php and paste the content in the field then click **Remove Line Breaks**
-
 - Scroll down, the new content is inside **New Text without Line Breaks** click **Copy to Clipboard**
-
 - Open `config.properties` remove the text in front of `private_key` and paste the text from the previous step
-
 - Inside `config.properties` change **consumer_key** value to `OauthKey` and **jira_home** to your domain for example: https://askar.atlassian.net
 
 - Save the file
