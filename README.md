@@ -46,6 +46,7 @@ Create application link
 * Consumer Key = OauthKey
 * Consumer Name = Your name
 * Public Key = copy the public key from the `jira_publickey.pem` file and paste it into this field
+  
   Warning: You need to copy only the text between `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----` not all the content.
 * Click "Continue"
 
