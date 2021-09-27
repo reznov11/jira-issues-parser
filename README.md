@@ -56,7 +56,7 @@ Change config.example settings
 - Open this website https://www.textfixer.com/tools/remove-line-breaks.php and paste the content in the field then click **Remove Line Breaks**
 - Scroll down, the new content is inside **New Text without Line Breaks** click **Copy to Clipboard**
 - Open `config.properties` remove the text in front of `private_key` and paste the text from the previous step
-- Inside `config.properties` change **consumer_key** value to `OauthKey` and **jira_home** to your domain for example: https://askar.atlassian.net
+- Inside `config.properties` change **consumer_key** value to `OauthKey` and **jira_home** to your domain for example: https://jira-domain.atlassian.net
 
 - Save the file
 
