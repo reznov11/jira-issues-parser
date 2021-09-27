@@ -6,9 +6,16 @@ Generate keys
 
 # Run the following commands
 
+#### This command to generate a secret ssl key that later will be used to authenticate yourself with server
 - openssl genrsa -out jira_privatekey.pem 1024
+
+#### This to generate a public certification from your secret key 
 - openssl req -newkey rsa:1024 -x509 -key jira_privatekey.pem -out jira_publickey.cer -days 365
+
+#### This to generate the main file that you will be using in your script to make a secure connection with JIRA server
 - openssl pkcs8 -topk8 -nocrypt -in jira_privatekey.pem -out jira_privatekey.pcks8
+
+#### This to generate a public key for you Application on JIRA
 - openssl x509 -pubkey -noout -in jira_publickey.cer  > jira_publickey.pem
 
 Generate config.example
