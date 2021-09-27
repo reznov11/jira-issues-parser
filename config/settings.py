@@ -3,7 +3,6 @@ import os
 
 DOMAIN = os.environ.get('JIRA_DOMAIN', "jira-tt-123")
 MAIN_URL = f"https://{DOMAIN}.atlassian.net"
-SEARCH_URL = f"{MAIN_URL}/rest/api/3/search"
 
 CONFIG = {
   "key_file": os.environ.get('PVT_FILE', "jira_privatekey.pcks8"),
