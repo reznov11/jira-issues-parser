@@ -9,7 +9,7 @@ Generate keys
 #### This command to generate a secret ssl key that later will be used to authenticate yourself with server
 - openssl genrsa -out jira_privatekey.pem 1024
 
-#### This to generate a public certification from your secret key 
+#### This to generate a public certification from your secret key for one year
 - openssl req -newkey rsa:1024 -x509 -key jira_privatekey.pem -out jira_publickey.cer -days 365
 
 #### This to generate the main file that you will be using in your script to make a secure connection with JIRA server
