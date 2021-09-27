@@ -13,6 +13,7 @@ Generate keys
 - openssl req -newkey rsa:1024 -x509 -key jira_privatekey.pem -out jira_publickey.cer -days 365
 
 #### This to generate the main file that you will be using in your script to make a secure connection with JIRA server
+#### Keep this file on your PC and don't share it with anybody 
 - openssl pkcs8 -topk8 -nocrypt -in jira_privatekey.pem -out jira_privatekey.pcks8
 
 #### This to generate a public key for your Application on JIRA
